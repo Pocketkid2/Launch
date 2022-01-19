@@ -1,0 +1,16 @@
+name: ${name}
+version: ${version}
+main: ${groupId}.${artifactId}.${name}Plugin
+description: ${description}
+api-version: 1.18
+author: ${author}
+commands:
+    launch:
+        description: Launches a projectile in the direction that you're looking!
+        usage: /<command> <type> [settings]
+        permission: launch.command
+        permission-message: You don't have permission for that!
+permissions:
+    launch.command:
+        description: Allows you to use the command
+        default: op
