@@ -21,7 +21,7 @@ public class LaunchTabCompleter implements TabCompleter {
 	@Override
 	public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
 		if (args.length > 0) {
-			List<String> types = plugin.getTypes().stream().map(Class::getName).collect(Collectors.toList());
+			List<String> types = plugin.getTypes().stream().map(Class::getSimpleName).collect(Collectors.toList());
 			List<String> matches = new ArrayList<>();
 			StringUtil.copyPartialMatches(args[0], types, matches);
 			Collections.sort(matches);
