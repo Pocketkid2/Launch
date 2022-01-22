@@ -24,7 +24,7 @@ public class LaunchCommand implements CommandExecutor {
 				return false;
 			}
 			for (Class<? extends Projectile> c : plugin.getTypes()) {
-				if (c.getName().equalsIgnoreCase(args[0])) {
+				if (c.getSimpleName().equalsIgnoreCase(args[0])) {
 					player.launchProjectile(c);
 					return true;
 				}
