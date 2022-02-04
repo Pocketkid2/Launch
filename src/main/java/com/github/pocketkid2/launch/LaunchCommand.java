@@ -26,6 +26,7 @@ public class LaunchCommand implements CommandExecutor {
 			for (Class<? extends Projectile> c : plugin.getTypes()) {
 				if (c.getSimpleName().equalsIgnoreCase(args[0])) {
 					player.launchProjectile(c);
+					player.sendMessage(ChatColor.GREEN + "Launched a projectile of type " + c.getSimpleName() + " from your location");
 					return true;
 				}
 			}
