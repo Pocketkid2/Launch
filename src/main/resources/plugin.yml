@@ -6,11 +6,19 @@ api-version: 1.18
 author: ${author}
 commands:
     launch:
-        description: Launches a projectile in the direction that you're looking!
-        usage: /<command> <type> [settings]
-        permission: launch.command
+        description: Launches a projectile in the direction that you're looking
+        usage: /<command> <type> [options]
+        permission: launch.projectile
+        permission-message: You don't have permission for that!
+    kamikaze:
+        description: Creates an explosion at your current location with the given parameters
+        usage: /<command> <size> [options]
+        permission: launch.explosion
         permission-message: You don't have permission for that!
 permissions:
-    launch.command:
-        description: Allows you to use the command
+    launch.projectile:
+        description: Allows you to use the launch command
+        default: op
+    launch.explosion:
+        description: Allows you to use the kamikaze command
         default: op
